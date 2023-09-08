@@ -5,11 +5,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { GitHubComponent } from './git-hub/git-hub.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { YouTubeComponent } from './you-tube/you-tube.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GitHubComponent
+    GitHubComponent,
+    YouTubeComponent
   ],
   imports: [
     BrowserModule,
