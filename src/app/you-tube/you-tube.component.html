@@ -1,17 +1,53 @@
-<table class="table table-striped">
-	<thead>
-		<tr>
-			<th scope="col">Imagem</th>
-			<th scope="col">Descrição</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr *ngFor="let video of videos.items; index as i">
-            <td><a target="_blank"  href="http://www.youtube.com/watch?v={{video.id.videoId}}"><img src="{{video.snippet.thumbnails.high.url}}"></a></td>
-			<td>{{ video.snippet.publishedAt | date: 'dd/MM/yyyy'}}
-			{{ video.snippet.title }}{{ video.snippet.title }}
-            {{ video.snippet.description }}
-		</tr>
-	</tbody>
-</table>
+<ngb-carousel *ngIf="videos.items.length>0">
+	<ng-template ngbSlide >
+		<div class="picsum-img-wrapper">
+			<a target="_blank"  href="http://www.youtube.com/watch?v={{videos.items[0].id.videoId}}"><img src="{{videos.items[0].snippet.thumbnails.high.url}}"></a>
+		</div>
+		<div class="carousel-caption">
+			<h3>{{videos.items[0].snippet.title}}</h3>
+			<p style="font-style: italic;">{{videos.items[0].snippet.publishedAt | date: 'dd/MM/yyyy'}}</p>
+			<p>{{videos.items[0].snippet.description }}</p>
+		</div>
+	</ng-template>
+	<ng-template ngbSlide >
+		<div class="picsum-img-wrapper">
+			<a target="_blank"  href="http://www.youtube.com/watch?v={{videos.items[1].id.videoId}}"><img src="{{videos.items[1].snippet.thumbnails.high.url}}"></a>
+		</div>
+		<div class="carousel-caption">
+			<h3>{{videos.items[1].snippet.title}}</h3>
+			<p style="font-style: italic;">{{videos.items[1].snippet.publishedAt | date: 'dd/MM/yyyy'}}</p>
+			<p>{{videos.items[1].snippet.description }}</p>
+		</div>
+	</ng-template>
+	<ng-template ngbSlide >
+		<div class="picsum-img-wrapper">
+			<a target="_blank"  href="http://www.youtube.com/watch?v={{videos.items[2].id.videoId}}"><img src="{{videos.items[2].snippet.thumbnails.high.url}}"></a>
+		</div>
+		<div class="carousel-caption">
+			<h3>{{videos.items[2].snippet.title}}</h3>
+			<p style="font-style: italic;">{{videos.items[2].snippet.publishedAt | date: 'dd/MM/yyyy'}}</p>
+			<p>{{videos.items[2].snippet.description }}</p>
+		</div>
+	</ng-template>
+	<ng-template ngbSlide >
+		<div class="picsum-img-wrapper">
+			<a target="_blank"  href="http://www.youtube.com/watch?v={{videos.items[3].id.videoId}}"><img src="{{videos.items[3].snippet.thumbnails.high.url}}"></a>
+		</div>
+		<div class="carousel-caption">
+			<h3>{{videos.items[3].snippet.title}}</h3>
+			<p style="font-style: italic;">{{videos.items[3].snippet.publishedAt | date: 'dd/MM/yyyy'}}</p>
+			<p>{{videos.items[3].snippet.description }}</p>
+		</div>
+	</ng-template>
+	<ng-template ngbSlide >
+		<div class="picsum-img-wrapper">
+			<a target="_blank"  href="http://www.youtube.com/watch?v={{videos.items[4].id.videoId}}"><img src="{{videos.items[4].snippet.thumbnails.high.url}}"></a>
+		</div>
+		<div class="carousel-caption">
+			<h3>{{videos.items[4].snippet.title}}</h3>
+			<p style="font-style: italic;">{{videos.items[4].snippet.publishedAt | date: 'dd/MM/yyyy'}}</p>
+			<p>{{videos.items[4].snippet.description }}</p>
+		</div>
+	</ng-template>
+</ngb-carousel>
 

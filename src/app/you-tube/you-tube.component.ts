@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import {GithubService, IRepository} from "../git-hub.service";
-import {YouTubeService,Videos} from "../you-tube.service";
+import { YouTubeService,Videos } from "../you-tube.service";
 
 @Component({
   selector: 'app-you-tube',
