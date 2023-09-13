@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { YouTubeService,Videos } from "../you-tube.service";
+import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-you-tube',
-  templateUrl: './you-tube.component.html',
-  styleUrls: ['./you-tube.component.css']
+  templateUrl: './you-tube.component.html'
+
 })
 export class YouTubeComponent {
   protected  videos: Videos={
@@ -29,6 +30,8 @@ export class YouTubeComponent {
     this.youtubeService.getVideos().subscribe({
       next:(value:Videos)=>{
         this.videos=value;
+        console.log(value);
+
       }
     });
   }
