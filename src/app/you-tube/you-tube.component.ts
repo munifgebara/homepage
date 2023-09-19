@@ -31,7 +31,6 @@ export class YouTubeComponent {
       next:(value:Videos)=>{
         this.videos=value;
         console.log(value);
-
       }
     });
   }

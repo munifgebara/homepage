@@ -11,12 +11,12 @@ export class GitHubComponent implements OnInit{
 protected repos:IRepository[]=[];
 
   constructor(protected gitHubService:GithubService ){
-    
+
   }
   ngOnInit(): void {
     this.gitHubService.listRepositories().subscribe({
       next:(value:IRepository[])=>{
-        this.repos=value;
+        this.repos=value.filter(r=>r.description!=null);
       }
     });
   }

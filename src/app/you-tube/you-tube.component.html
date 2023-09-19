@@ -3,7 +3,7 @@
 		<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
 			<div class="col" *ngFor="let video of videos.items; index as i">
 				<div class="card shadow-sm">
-					<a target="_blank" href="http://www.youtube.com/watch?v={{video.id.videoId}}"><img class="bd-placeholder-img card-img-top" width="100%"  height="225" src="{{video.snippet.thumbnails.high.url}}" alt="first" /></a>
+					<a target="_blank" href="http://www.youtube.com/watch?v={{video.id.videoId}}"><img class="bd-placeholder-img card-img-top"  src="{{video.snippet.thumbnails.high.url}}" alt="first" /></a>
 					<div class="card-body">
 						<p class="card-text">
 							{{video.snippet.title}}
